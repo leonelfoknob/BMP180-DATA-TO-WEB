@@ -14,7 +14,8 @@ while True:
     if data:#verifi si la ligne n'est pas vide si c'est vide sa ne fait rien au cas contraire sa enregistre et sa break
         value = data.decode('utf-8')
 
-        rows = [float(x) for x in value.split(',')]
+        #rows = [float(x) for x in value.split(',')]
+        rows = [x for x in value.split(',')]
         temperature = rows[0] 
         pressure = rows[1]
         altitude = rows[2]
