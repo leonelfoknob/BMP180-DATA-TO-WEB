@@ -18,7 +18,8 @@ while True:
     data = ser.readline()
     if data:#verifi si la ligne n'est pas vide si c'est vide sa ne fait rien au cas contraire sa enregistre et sa break
         value = data.decode('utf-8')
-        rows = [float(x) for x in value.split(',')] #prend les valeur et l'enregistre dans une liste et les converti en float
+        #rows = [float(x) for x in value.split(',')] #prend les valeur et l'enregistre dans une liste et les converti en float
+        rows = [x for x in value.split(',')] #prend les valeur et l'enregistre dans une liste et les converti en float
         #separe la liste en differente valeur donnée par le sensor
         temperature = rows[0] 
         pressure = rows[1]
